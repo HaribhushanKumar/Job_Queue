@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: job-queue-backend
+    env: node
+    region: singapore
+    buildCommand: npm install && npm run build
+    startCommand: node dist/main.js
+    envVars:
+      - key: NODE_ENV
+        value: production
